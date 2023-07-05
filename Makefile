@@ -129,6 +129,54 @@ mu-emu/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/build
 .PHONY : mu-emu/fast
 
+core/rv32i/rv32i.o: core/rv32i/rv32i.cpp.o
+.PHONY : core/rv32i/rv32i.o
+
+# target to build an object file
+core/rv32i/rv32i.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/core/rv32i/rv32i.cpp.o
+.PHONY : core/rv32i/rv32i.cpp.o
+
+core/rv32i/rv32i.i: core/rv32i/rv32i.cpp.i
+.PHONY : core/rv32i/rv32i.i
+
+# target to preprocess a source file
+core/rv32i/rv32i.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/core/rv32i/rv32i.cpp.i
+.PHONY : core/rv32i/rv32i.cpp.i
+
+core/rv32i/rv32i.s: core/rv32i/rv32i.cpp.s
+.PHONY : core/rv32i/rv32i.s
+
+# target to generate assembly for a file
+core/rv32i/rv32i.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/core/rv32i/rv32i.cpp.s
+.PHONY : core/rv32i/rv32i.cpp.s
+
+core/vm.o: core/vm.cpp.o
+.PHONY : core/vm.o
+
+# target to build an object file
+core/vm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/core/vm.cpp.o
+.PHONY : core/vm.cpp.o
+
+core/vm.i: core/vm.cpp.i
+.PHONY : core/vm.i
+
+# target to preprocess a source file
+core/vm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/core/vm.cpp.i
+.PHONY : core/vm.cpp.i
+
+core/vm.s: core/vm.cpp.s
+.PHONY : core/vm.s
+
+# target to generate assembly for a file
+core/vm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mu-emu.dir/build.make CMakeFiles/mu-emu.dir/core/vm.cpp.s
+.PHONY : core/vm.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mu-emu"
+	@echo "... core/rv32i/rv32i.o"
+	@echo "... core/rv32i/rv32i.i"
+	@echo "... core/rv32i/rv32i.s"
+	@echo "... core/vm.o"
+	@echo "... core/vm.i"
+	@echo "... core/vm.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

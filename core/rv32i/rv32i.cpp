@@ -2,6 +2,6 @@
 
 using namespace MuEmu::ISA::RV32I;
 
-void ExecStrat::Execute() {
+void ExecutionStrategy::Execute() {
     std::cout << "Executing in RV32I!" << std::endl;
 }

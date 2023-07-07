@@ -25,12 +25,12 @@ namespace MuEmu {
             std::unique_ptr<ExecutionStrategy> execStrat;
 
         public:
-            VM(size_t memorySize);
+            VM(uint32_t memorySize);
             void PrintSomething(std::string str);
             void SetExecutionStrategy(std::string execStrat);
             void Step();
             void Run();
-            void MemWrite(size_t addr, void *src, size_t size);
-            void MemRead(void *dest, size_t addr, size_t size);
+            void MemWrite(uint32_t addr, void *src, uint32_t size);
+            void MemRead(void *dest, uint32_t addr, uint32_t size);
     };
 }

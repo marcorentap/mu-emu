@@ -7,7 +7,7 @@
 
 using namespace MuEmu;
 
-VM::VM(size_t memorySize) {
+VM::VM(uint32_t memorySize) {
     this->memory = std::make_unique<char[]>(memorySize);
 }
 
@@ -31,12 +31,12 @@ void VM::Run() {
     std::cout << "run" << std::endl;
 }
 
-void VM::MemWrite(size_t addr, void* src, size_t size) {
+void VM::MemWrite(uint32_t addr, void* src, uint32_t size) {
     void* real_addr = this->memory.get() + addr;
     std::memcpy(real_addr, src, size);
 }
 
-void VM::MemRead(void *dest, size_t addr, size_t size) {
+void VM::MemRead(void *dest, uint32_t addr, uint32_t size) {
     void *real_addr = this->memory.get() + addr;
     std::memcpy(dest, real_addr, size);
 }

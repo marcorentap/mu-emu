@@ -2,8 +2,8 @@
 #include <memory>
 #include <cstring>
 #include <utility>
-#include "vm.h"
-#include "rv32i/rv32i.h"
+#include "mu-emu/core.h"
+#include "mu-emu/rv32i.h"
 
 using namespace MuEmu;
 

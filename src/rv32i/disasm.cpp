@@ -1,22 +1,26 @@
 #include <string>
-#include "rv32i.h"
-#include "inst.h"
-#include <format>
+#include "mu-emu/rv32i.h"
+#include "fmt/core.h"
 
 using MuEmu::ISA::RV32I::Instruction;
 
 std::string DisassembleR(Instruction inst) {
-    std::
+    return "";
 }
 std::string DisassembleI(Instruction inst) {
+    return "";
 }
 std::string DisassembleS(Instruction inst) {
+    return "";
 }
 std::string DisassembleB(Instruction inst) {
+    return "";
 }
 std::string DisassembleU(Instruction inst) {
+    return "";
 }
 std::string DisassembleJ(Instruction inst) {
+    return "";
 }
 
 namespace MuEmu { namespace ISA {namespace RV32I {

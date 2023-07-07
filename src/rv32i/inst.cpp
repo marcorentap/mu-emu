@@ -1,5 +1,4 @@
-#include "inst.h"
-#include "rv32i.h"
+#include "mu-emu/rv32i.h"
 
 using MuEmu::ISA::RV32I::Instruction;
 using MuEmu::ISA::RV32I::InstructionType;

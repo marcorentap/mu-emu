@@ -1,4 +1,3 @@
 .gdb_history
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
+build/
+.cache/

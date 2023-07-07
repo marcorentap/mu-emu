@@ -9,5 +9,4 @@ int main() {
     vm.PrintSomething("something");
     vm.Step();
 
-    fmt::print("Elapsed time: {0:.2f} seconds", 1.23);
 }

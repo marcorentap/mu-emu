@@ -40,3 +40,11 @@ void VM::MemRead(void *dest, uint32_t addr, uint32_t size) {
     void *real_addr = this->memory.get() + addr;
     std::memcpy(dest, real_addr, size);
 }
+
+void VM::RegWrite(size_t regId, int32_t src) {
+    this->regfile[regId] = src;
+}
+
+int32_t VM::RegRead(size_t regId) {
+    return this->regfile[regId];
+}

@@ -8,6 +8,10 @@
 namespace MuEmu {
     class VM {
         public:
+            // All registers, including general purpose, control, etc.
+            std::vector<int32_t> regfile;
+            std::unique_ptr<char[]> memory;
+
             class ExecutionStrategy {
                 protected:
                     VM &vm;
@@ -19,9 +23,6 @@ namespace MuEmu {
             };
         
         private:
-            // All registers, including general purpose, control, etc.
-            std::vector<int> regfile;
-            std::unique_ptr<char[]> memory;
             std::unique_ptr<ExecutionStrategy> execStrat;
 
         public:
@@ -32,5 +33,7 @@ namespace MuEmu {
             void Run();
             void MemWrite(uint32_t addr, void *src, uint32_t size);
             void MemRead(void *dest, uint32_t addr, uint32_t size);
+            void RegWrite(size_t regId, int32_t src);
+            int32_t RegRead(size_t regId);
     };
 }

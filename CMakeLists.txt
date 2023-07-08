@@ -4,7 +4,7 @@ project(mu-emu)
 add_library(rv32i
             src/rv32i/disasm.cpp
             src/rv32i/inst.cpp
-            src/rv32i/rv32i.cpp
+            src/rv32i/exec.cpp
 )
 target_include_directories(rv32i PUBLIC lib/fmt/include)
 target_include_directories(rv32i PUBLIC include)

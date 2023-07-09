@@ -288,8 +288,10 @@ void ExecutionStrategy::Sw(MuEmu::VM &vm, Instruction &inst) {
 }
 
 void ExecutionStrategy::Execute() {
+    int32_t instWord;
     int32_t pc = this->vm.RegRead(RegisterName::pc);
-    Instruction inst = Instruction(pc);
+    this->vm.MemRead(&instWord, pc, 4);
+    Instruction inst = Instruction(instWord);
 
     for (auto &entry: instructionSet) {
         if (entry.opcode == inst.Opcode() &&

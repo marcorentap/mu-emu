@@ -12,7 +12,6 @@ VM::VM(uint32_t memorySize) {
 }
 
 void VM::SetExecutionStrategy(std::string execStrat) {
-    std::cout << "Set execution" << std::endl;
     if (execStrat == "RV32I") {
         auto execStrat= std::make_unique<MuEmu::ISA::RV32I::ExecutionStrategy>(*this);
         this->execStrat = std::move(execStrat);
@@ -28,7 +27,6 @@ void VM::Step() {
 }
 
 void VM::Run() {
-    std::cout << "run" << std::endl;
 }
 
 void VM::MemWrite(uint32_t addr, void* src, uint32_t size) {

@@ -33,7 +33,7 @@ target_include_directories(core PUBLIC lib/fmt/include)
 target_include_directories(core PUBLIC include)
 
 add_library(tui
-            src/tui/tui.cpp
+            src/tui/rv32i.cpp
 )
 target_include_directories(tui PUBLIC lib/fmt/include)
 target_include_directories(tui PUBLIC include)
@@ -46,3 +46,4 @@ target_link_libraries(tui
 
 add_executable(mu-emu src/main.cpp)
 target_link_libraries(mu-emu core rv32i tui)
+target_include_directories(mu-emu PUBLIC lib/argparse)
